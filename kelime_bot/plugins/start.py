@@ -76,7 +76,7 @@ async def kelimeoyun(c:Client, m:Message):
 🎯 Raund : {oyun[m.chat.id]['round']}/20 
 📝 Söz :   <code>{kelime_list}</code>
 💰 Qazandığınız Say: 1
-🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
+🔎 Kömək: 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
 ✏️ Qəarışıq həriflərdən düzgün sözü tapma
