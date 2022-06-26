@@ -22,7 +22,7 @@ async def buldu(c:Client, m:Message):
     try:
         if m.chat.id in oyun:
             if m.text.lower() == oyun[m.chat.id]["kelime"]:
-                await c.send_message(m.chat.id,f"✨ Tebrikler !\n**{m.from_user.mention}** \n**<code>{oyun[m.chat.id]['kelime']}</code>** , Sözünü Buldu ✅")
+                await c.send_message(m.chat.id,f"✨ Təbriklər !\n**{m.from_user.mention}** \n**<code>{oyun[m.chat.id]['kelime']}</code>** , Sözünü Buldu ✅")
                 if f"{m.from_user.mention}" in rating:
                     rating[f"{m.from_user.mention}"] += 1
                 else:
@@ -38,7 +38,7 @@ async def buldu(c:Client, m:Message):
                 oyun[m.chat.id]["kelime"] = kelime_sec()
                 oyun[m.chat.id]["round"] = oyun[m.chat.id]["round"] + 1
                 
-                if not oyun[m.chat.id]["round"] <= 60:
+                if not oyun[m.chat.id]["round"] <= 15:
                     siralama = []
                     for i in oyun[m.chat.id]["oyuncular"]:
                         siralama.append(f"{i} :   {oyun[m.chat.id]['oyuncular'][i]}  Bal")
@@ -47,7 +47,7 @@ async def buldu(c:Client, m:Message):
                     for i in siralama:
                         siralama_text += i + "\n"
                     
-                    return await c.send_message(m.chat.id,f"✅ Oyun Bitti✓ \n\n📝 Puan :\n\n{siralama_text}\n\n Yeni Oyuna Başlamak İçin /game Yaza Bilirsiniz !")
+                    return await c.send_message(m.chat.id,f"✅ Oyun Qutardı✓ \n\n📝 Qazanlan Saylar :\n\n{siralama_text}\n\n Yeni Oyuna Başlamaq Üçün /oyun Yaza Bilərsiz !")
                 
                 
                 
@@ -60,11 +60,11 @@ async def buldu(c:Client, m:Message):
                 text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan: 1
+💰 qazandığınıq Say: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ Qarışıq həriflərədən düzgün sözü tapın 
                         """
                 await c.send_message(m.chat.id, text)
     except KeyError:
