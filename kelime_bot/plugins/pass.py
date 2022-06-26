@@ -34,10 +34,10 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
+🎯 Raund : {oyun[m.chat.id]['round']}/20 
 📝 Söz :   <code>{kelime_list}</code>
 💰 Qazandığınız Say : 1
-🔎 Ipucu : 1. {oyun[m.chat.id]["kelime"][0]}
+🔎 Kömək : 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 𝖴𝗓𝗎𝗇𝗅uq: {int(len(kelime_list)/2)} 
 
 ✏️ Qəarışıq həriflərdən düzgün sözü tapın
