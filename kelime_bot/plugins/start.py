@@ -75,11 +75,11 @@ async def kelimeoyun(c:Client, m:Message):
         text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Qazandığınız Xal: 1
+💰 Qazandığınız Say: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
-✏️ qəarışıq həriflərdən düzgün sözü tapma
+✏️ Qəarışıq həriflərdən düzgün sözü tapma
         """
         await c.send_message(m.chat.id, text)
         
