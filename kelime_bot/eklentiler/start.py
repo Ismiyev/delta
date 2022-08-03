@@ -18,15 +18,15 @@ keyboard = InlineKeyboardMarkup([
         InlineKeyboardButton("💬 Chat", url="https://t.me/+0kf_3zSzsCszZWJk"),
     ]
 ])
-
-
-START = """
+]
+]
+BAŞLAT  = komek """
 **🔮 Merhaba, Kelimeleri tersten bulma oyununa hoş geldin..**
-
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+]
+➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve araç.
 """
-
-HELP = """
+]
+YARDIM  = help """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
 /game - Oyunu başlatmak için..
 /pass - Üç adet hakkınız mevcut, oyunu geçmek için.. 
